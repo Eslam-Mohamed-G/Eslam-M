@@ -1,0 +1,182 @@
+/*table of contents
+
+1-header Design
+2- Button & Icons
+3- Model == pop up
+4- Responsive Design
+
+*/
+
+/* 1- Header Design*/
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    padding-top: 3rem;
+}
+
+header nav{
+    background-color: var(--bgHeader);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    box-shadow: 1px 1px 40px rgba(53, 50, 50, .292);
+}
+
+header ul{
+   gap: 16px; 
+   display: flex;
+   position: relative;
+}
+
+header ul li a{
+    color: var(--title-color);
+    opacity: .9;
+    font-size: .88rem;
+    font-weight: 500;
+}
+
+header ul li a:hover{
+    color: var(--blue);
+    opacity: .9rem;
+    font-size: .88rem;
+    font-weight: 500;
+}
+
+header button{
+    font-size: 1.2rem;
+}
+
+header button.menu{
+    display: none;
+}
+
+/***************************  2- Button & Icons  *******************************************/
+
+header .icon-menu, header .mode{
+    background-color: var(--bgHeader);
+    width: 2.4rem;
+    height: 2.4rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--text-color);
+    border: 1px solid rgba(244, 165, 96, 0.249);
+    transition: .3s;
+}
+
+header .icon-menu:hover, header .mode:hover{
+    color: var(--title-color);
+    border: 1px solid rgb(244, 165, 96);
+}
+
+
+
+header .icon-close{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: .5s;
+    position: absolute;
+    right: 10px;
+}
+
+header .icon-close:hover{
+    font-size: 1.7rem;
+    color: crimson;
+    rotate: 180deg;
+    overflow: visible;
+    box-sizing: inherit;
+}
+
+/******************************* Model ---- pop up**********************************/
+/******************************* Model ---- pop up**********************************/
+
+.header .fixed{
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(40, 40, 48, .91);
+    backdrop-filter: blur(2px);
+}
+
+@keyframes mymove {
+    0%   {scale: 0;}
+    50%  {scale: 1.1;}
+    100% {scale: 1;}
+}
+
+.header ul.modal{
+    background-color: var(--secondary);
+    display: block;
+    width: 75%;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    animation: mymove .5s 1;
+    
+}
+
+.header ul.modal li{
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;   
+}
+
+.header ul.modal li:first-child{
+    border: none;
+    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.header ul.modal li:last-child{
+    border: none;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+
+/*=========================
+light ===>>>mode
+============================*/
+
+.light header .icon-menu, .light header .mode{
+    border: 1px solid rgba(73, 65, 57, 0.249);
+}
+.light header .icon-menu:hover, .light header .mode:hover{
+    color: var(--title-color);
+    border: 1px solid var(--mode-color);
+}
+
+/*=========================
+light ===>>>mode
+============================*/
+
+@media (max-width: 700px){
+    header nav{
+        display: none;
+    }
+
+    header button.menu{display: block;}
+
+    .fixed{
+        padding: 10% ;
+    }
+    .modal{
+        margin: 0 auto;
+    }
+
+    .header ul.modal li a{
+        font-size: 1rem;
+        font-weight: 700;
+        padding-bottom: .9rem;
+        padding-right: 60%;
+    }
+
+    .header ul.modal li:nth-child(2) a{
+        padding-right: 50%;
+    }
+
+}

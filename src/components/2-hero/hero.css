@@ -1,0 +1,228 @@
+.hero {
+    display: flex;
+    height: 100vh;
+}
+
+.hero .left-section {
+    flex-grow: 1;
+    width: 60%;
+    height: fit-content;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    position: relative;
+}
+
+.hero .left-section p{
+    color: var(--text-color);
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
+
+.avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border-top: 1px solid beige;
+    border-left: 1px solid beige;
+    border-right: 1px solid orange;
+    border-bottom: 1px solid orange;
+    padding: 2px;
+}
+
+
+/* text animation*/
+/* text animation*/
+
+.tm-site-header {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: var(--title-color);
+}
+
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+
+.text-animation span {
+    position: relative;
+    padding-bottom: 1px;
+}
+
+.text-animation span::before {
+    content: "Web Developer";
+    color: var(--title-color);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    padding-top: 10px;
+    content: "";
+    background-color: var(--secondary);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--title-color);
+    right: -8px;
+    animation: cursor .6s infinite, typing 20s steps(14) infinite;
+}
+
+/*====================icons============================*/
+.hero ul{
+    display: flex;
+    gap: 2rem;
+    height: 30px;
+}
+
+.icons{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    height: fit-content;
+}
+
+.hero ul .hero-icon{
+    color: var(--text-color);
+    transition: .3s;
+    display: inline-block;
+} 
+
+.hero .hero-icon:hover{
+    color: var(--title-color);
+    transform: scale(1.2)translateY(-5px);
+}
+
+.hero .resume{
+    background-color: rgba(36, 37, 46, 1);
+    width: 7rem;
+    padding: 10px 0;
+    font-size: 1.05rem;
+    text-align: center;
+    border-radius: 5px;
+    opacity: .5;
+    transition: .3s;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.hero .resume:hover {
+    opacity: 1;
+}
+
+.hero p{
+    width: 580px;
+}
+
+
+@keyframes words {
+
+    0%,20% {content: "Eslam Mohamed";}
+
+    21%,40% {content: "Frontend Designer";}
+
+    41%,
+    60% {
+        content: "Web Developer";
+    }
+
+    61%,
+    80% {
+        content: "Web Designer";
+    }
+
+    81%,
+    100% {
+        content: "UI / UX Designer";
+    }
+
+}
+
+@keyframes typing {
+
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+
+    5%,20%,25%,40%,45%,60%,65%,80%,85% {
+        width: calc(100% + 8px);
+    }
+}
+
+@media (max-width: 900px){
+    .hero{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .hero .left-section{
+        padding-top: 5rem;
+        margin-top: 0rem;
+        height: 400px;
+        width: 100%;
+    }
+    .text-animation {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 1rem;
+        position: relative;
+    }
+    .hero .animation{
+        width: 100%;
+        height: 500px;
+        position: relative;
+        top: -40px;
+    }
+
+    .hero .frontendAnimation{
+        position: absolute;
+        top: 0;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        height: 400px;
+    }
+   
+}
+
+@media (max-width: 500px){
+    .hero{
+        height: 70vh;
+    }
+    .hero p{
+        width: 100%;
+    }
+    .text-animation{
+      width: 100%;
+      font-size: 20px;
+      font-weight: 300;
+      padding-bottom: 20px;
+      margin: 10px 0px;
+    }
+
+    .animation{
+        display: none;
+    }
+
+}
+
+
+.animation{
+    width: 40%;
+    margin-top: 5rem;
+    position: relative;
+}
+.hero .frontendAnimation{
+    position: absolute;
+    top: 10%;
+}
+
+
