@@ -51,7 +51,7 @@ const Header = () => {
           <ul className="modal">
             <li/>
 
-            <li><a href="#header">About Me</a><button className="icon-close" onClick={() => {setShowModal(false); }}/></li>
+            <li><a href="#about">About</a><button className="icon-close" onClick={() => {setShowModal(false); }}/></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>

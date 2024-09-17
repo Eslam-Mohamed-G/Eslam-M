@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./contact.css";
 import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
-import doneAnimation from '../../../src/animation/done.json';
-import contactAnimation from '../../../src/animation/contactMe.json';
-import blackemail from '../../../src/animation/black-email.json';
-import whiteemail from '../../../src/animation/white-email.json';
+import doneAnimation from '../../animation/done.json';
+import contactAnimation from '../../animation/contactMe.json';
+import blackemail from '../../animation/black-email.json';
+import whiteemail from '../../animation/white-email.json';
 const Contact = () => {
   const [state, handleSubmit] = useForm("mvgplpyw");
 

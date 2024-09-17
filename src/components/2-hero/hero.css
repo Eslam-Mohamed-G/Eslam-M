@@ -196,16 +196,44 @@
 @media (max-width: 500px){
     .hero{
         height: 70vh;
+        padding-bottom: 6rem;
+    }
+    .parent-avatar{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-bottom: 1rem;
+    }
+    .tm-site-header{
+        margin-top: 2rem;
     }
     .hero p{
         width: 100%;
+        text-align: left;
     }
+
     .text-animation{
       width: 100%;
       font-size: 20px;
       font-weight: 300;
       padding-bottom: 20px;
       margin: 10px 0px;
+    }
+
+    .icons{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .hero .resume{
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+
     }
 
     .animation{

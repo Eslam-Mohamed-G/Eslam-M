@@ -99,6 +99,10 @@ button:active{
   
 
 @media (max-width: 500px){
+  *{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   .container{
     width: 100%;
   }
