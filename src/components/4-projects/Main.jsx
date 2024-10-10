@@ -5,8 +5,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 
 const Main = () => {
-  const [currentActive, setcurrentActive] = useState('all');
+  const [currentActive, setcurrentActive] = useState('all')
   const [arr, setArr] = useState(myProjects);
+  const [showMore, setShowMore] = useState(false)
 
 
   const handleClick = (projectCategory) => {
@@ -18,7 +19,7 @@ const Main = () => {
     setArr(newArr);
   };
   return (
-    <main id="projects">
+    <main id="projects" className='main_projects'>
       <section className="left-section">
         <button
           onClick={() => {
@@ -64,7 +65,7 @@ const Main = () => {
               <img src={item.imgPath} alt="" />
               <div className="box">
                 <h1>{item.projectTitle}</h1>
-                <p>{item.desription}</p>
+                <p>{item.description}</p>
                 <div className="card-link">
                   <ul>
                     <li>

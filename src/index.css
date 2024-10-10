@@ -27,7 +27,14 @@
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
+
+*,*::before , 
+*::after{
+  box-sizing: inherit;
+}
+
 html{
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -36,17 +43,12 @@ html{
   scroll-behavior: smooth;
 }
 
-
-*,*::before , *::after{box-sizing: inherit;}
-
-li{
-  list-style: none;
-}
-
+li{list-style: none;}
+  
 a{
   text-decoration: none;
   color: initial;
-  transition: .2s;
+  transition: .8s;
 }
 p{
   color: var(--text-color);
@@ -61,16 +63,7 @@ body{
   background-color: var(--secondary);
   border: 1px solid var(--border);
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 5%;
-}
-
-.divider{
-  border-bottom: 2px solid var(--border);
-  margin: 3rem -7.2%;
-  width: calc(100% ++ 7%);
-  padding: 0;
+  margin: auto;
 }
 
 button {all: unset; cursor: pointer; }
@@ -99,10 +92,6 @@ button:active{
   
 
 @media (max-width: 500px){
-  *{
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
   .container{
     width: 100%;
   }

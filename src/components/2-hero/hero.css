@@ -1,14 +1,29 @@
 .hero {
+    padding: 0rem 5%;
     display: flex;
-    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 90vh;
+    position: relative;
+}
+
+.hero::after{
+    content: "";
+    background-color: var(--border);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .hero .left-section {
-    flex-grow: 1;
-    width: 60%;
+    width: 50%;
     height: fit-content;
-    margin-top: 5rem;
-    padding-top: 5rem;
     position: relative;
 }
 
@@ -16,22 +31,60 @@
     color: var(--text-color);
     font-size: .9rem;
     line-height: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.parent-avatar{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.parent-avatar::before{
+    width: 105px;
+    height: 5px;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    z-index: 1;
+}
+
+.parent-avatar::after{
+    width: 103px;
+    height: 103px;
+    border-radius: 50%;
+    background: linear-gradient( beige 50%, orange 50%);
+}
+
+.parent-avatar::before,
+.parent-avatar::after{
+    content: "";
+    position: absolute;
+    animation: rotateCircle 12s linear infinite;
+}
+
+
+@keyframes rotateCircle{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
 
 .avatar {
-    width: 88px;
-    height: 88px;
+    width: 100px;
+    height: 100px;
+    display: block;
     border-radius: 50%;
-    border-top: 1px solid beige;
-    border-left: 1px solid beige;
-    border-right: 1px solid orange;
-    border-bottom: 1px solid orange;
-    padding: 2px;
+    border: 4px solid var(--secondary);
+    z-index: 2;
 }
 
 
-/* text animation*/
-/* text animation*/
+/***************************** text animation *****************************/
+/***************************** text animation *****************************/
 
 .tm-site-header {
     margin: 10px 0px;
@@ -43,16 +96,15 @@
 }
 
 .text-animation {
-    font-size: 34px;
+    font-size: 180%;
     font-weight: 600;
+    margin-bottom: 2rem;
     position: relative;
-    margin-bottom: 40px;
 }
 
 
 .text-animation span {
     position: relative;
-    padding-bottom: 1px;
 }
 
 .text-animation span::before {
@@ -62,18 +114,42 @@
 }
 
 .text-animation span::after {
-    padding-top: 10px;
     content: "";
-    background-color: var(--secondary);
     position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--title-color);
+    top: -1px;
+    bottom: -1px;
     right: -8px;
+    width: calc(100% + 8px);
+    background-color: var(--secondary);
+    border-left: 3px solid var(--title-color);
     animation: cursor .6s infinite, typing 20s steps(14) infinite;
 }
 
+@keyframes words {
+    0%,20% {content: "Eslam Mohamed";}
+
+    21%,40% {content: "Frontend Designer";}
+
+    41%, 60% {content: "Web Developer";}
+
+    61%, 80% { content: "Web Designer";}
+
+    81%, 100% {content: "UI / UX Designer";}
+}
+
+@keyframes typing {
+
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+
+    5%,20%,25%,40%,45%,60%,65%,80%,85% {
+        width: calc(100% + 8px);
+    }
+}
+
 /*====================icons============================*/
+
 .hero ul{
     display: flex;
     gap: 2rem;
@@ -89,12 +165,13 @@
 .hero ul .hero-icon{
     color: var(--text-color);
     transition: .3s;
-    display: inline-block;
+    display: block;
 } 
 
 .hero .hero-icon:hover{
     color: var(--title-color);
-    transform: scale(1.2)translateY(-5px);
+    /* transform: scale(1.2)translateY(-5px);*/
+    scale: 1.5;
 }
 
 .hero .resume{
@@ -107,66 +184,28 @@
     opacity: .5;
     transition: .3s;
     position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    bottom: 0px;
+    right: 10%;
 }
 
 .hero .resume:hover {
     opacity: 1;
 }
 
-.hero p{
-    width: 580px;
-}
 
 
-@keyframes words {
 
-    0%,20% {content: "Eslam Mohamed";}
-
-    21%,40% {content: "Frontend Designer";}
-
-    41%,
-    60% {
-        content: "Web Developer";
-    }
-
-    61%,
-    80% {
-        content: "Web Designer";
-    }
-
-    81%,
-    100% {
-        content: "UI / UX Designer";
-    }
-
-}
-
-@keyframes typing {
-
-    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
-        width: 0;
-    }
-
-    5%,20%,25%,40%,45%,60%,65%,80%,85% {
-        width: calc(100% + 8px);
-    }
-}
-
-@media (max-width: 900px){
+@media (max-width: 980px){
     .hero{
         height: 90vh;
         display: flex;
         flex-direction: column;
-        gap: 0;
+        flex-wrap: nowrap;
+        justify-content: space-around;
     }
     .hero .left-section{
-        padding-top: 5rem;
-        margin-top: 0rem;
-        height: 400px;
         width: 100%;
+        padding-right: 3rem;
     }
     .text-animation {
         font-size: 24px;
@@ -178,7 +217,6 @@
         width: 100%;
         height: 500px;
         position: relative;
-        top: -40px;
     }
 
     .hero .frontendAnimation{
@@ -195,48 +233,28 @@
 
 @media (max-width: 500px){
     .hero{
-        height: 70vh;
-        padding-bottom: 6rem;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
-    .parent-avatar{
-        display: block;
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        margin-bottom: 1rem;
-    }
-    .tm-site-header{
-        margin-top: 2rem;
-    }
-    .hero p{
+
+    .hero .left-section{
         width: 100%;
-        text-align: left;
     }
 
     .text-animation{
       width: 100%;
       font-size: 20px;
       font-weight: 300;
-      padding-bottom: 20px;
       margin: 10px 0px;
     }
 
-    .icons{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
+    .hero .left-section p{
+        margin: 1rem 0 3rem;
     }
 
-    .hero .resume{
-        position: absolute;
-        bottom: -100px;
-        left: 50%;
-        transform: translate(-50%, 0);
-
-    }
-
-    .animation{
+    .hero .animation{
         display: none;
     }
 
@@ -245,12 +263,14 @@
 
 .animation{
     width: 40%;
-    margin-top: 5rem;
+    display: block;
     position: relative;
 }
+
 .hero .frontendAnimation{
-    position: absolute;
-    top: 10%;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
 }
 
 

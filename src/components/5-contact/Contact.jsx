@@ -10,20 +10,28 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("mvgplpyw");
 
   return (
-    <section className="contact-us" id="contact">
-      <h1 className="title">
-        <Lottie animationData={whiteemail} className="whitee-mail-animation title-animation"/>
-        <Lottie animationData={blackemail} className="blacke-mail-animation title-animation"/>
-        <span className="icon-envelope"> </span> Contact Me
-      </h1>
-      <p>
-        Contact me for more information and Get notified when i publish
-        something new.
-      </p>
+    <section className="contact_us" id="contact">
+      <div className="head">
+        <h1 className="title">
+          <Lottie
+            animationData={whiteemail}
+            className="whitee-mail-animation title-animation"
+          />
+          <Lottie
+            animationData={blackemail}
+            className="blacke-mail-animation title-animation"
+          />
+          <span className="icon-envelope"> </span> Contact Me
+        </h1>
+        <p>
+          Contact me for more information and Get notified when i publish
+          something new.
+        </p>
+      </div>
 
-      <div className="contact-form">
+      <div className="contact_form">
         <form onSubmit={handleSubmit} className="form">
-          <div>
+          <div className="inputEmail">
             <label htmlFor="email">Email Address:</label>
             <input
               type="email"
@@ -39,9 +47,9 @@ const Contact = () => {
             />
           </div>
 
-          <div>
+          <div className="inputTextarea">
             <label htmlFor="message">Your Message:</label>
-            <textarea required name="message" id="message" ></textarea>
+            <textarea required name="message" id="message" />
             <ValidationError
               prefix="Message"
               field="message"
@@ -64,10 +72,10 @@ const Contact = () => {
           </div>
         </form>
 
-        <div className="contact-animation">
+        <div className="contactAnimation">
           <Lottie
             animationData={contactAnimation}
-            className="contactUs-animation"
+            className="lottieContactAnimation"
           ></Lottie>
         </div>
       </div>

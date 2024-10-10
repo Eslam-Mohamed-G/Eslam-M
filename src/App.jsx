@@ -22,13 +22,13 @@ function App() {
     <div className='container'>
       <Header/>
       <Hero/>
-      <div className='divider'/>
+
       <About/>
-      <div className='divider'/>
+
       <Main/>
-      <div className='divider'/>
+
       <Contact/>
-      <div className='divider'/>
+
       <Footer/>
       
       <a  className='icon-arrow-up' style={{opacity: ScrollBTN ? 1 : 0}} href="#header"></a>

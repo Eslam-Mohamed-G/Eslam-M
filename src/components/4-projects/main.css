@@ -1,8 +1,21 @@
-main {
+.main_projects {
     display: flex;
-    gap: 16px;
-    padding-top: 4rem;
+    justify-content: space-between;
+    padding: 8% 5%;
+    position: relative;
 }
+
+.main_projects::after{
+    content: "";
+    background-color: var(--border);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 
 /*=========================
 left-section ==> Button
@@ -49,69 +62,69 @@ right-section ==> Card
 
 main .right-section {
     flex-grow: 1;
-    justify-content: center;
+    justify-content: end;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-main .right-section img {
-    width: 250px;
-    height: 170px;
-    border-radius: 5px 5px 0px 0px;
-    border: none;
-    margin: auto;
-}
-
-.card {
-    width: fit-content;
-    border: 1px solid rgba(93, 188, 252, .3);
+main .right-section .card {
+    width: 30%;
     transition: .3s;
     border-radius: 5px;
     font-size: 15px;
-    background-image: linear-gradient(rgba(255, 255, 255, .05), rgba(255, 255, 255, .05));
+    background: linear-gradient(rgba(255, 255, 255, .05), rgba(255, 255, 255, .05));
+    border: 1px solid rgba(93, 188, 252, .3);
+    overflow: hidden;
 }
 
-.card:hover {
-    width: fit-content;
+main .right-section img {
+    width: 100%;
+    height: 180px;
+}
+
+main .right-section .card:hover {
     border: 1px solid var(--blue);
     rotate: 1deg;
     scale: 1.01;
 }
 
-.card .box {
+.right-section .card .box {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 100%;
     height: 150px;
     padding: 1rem 0;
     gap: 12px;
     padding: 5px;
     color: var(--title-color);
+    transition: .3s;
 }
 
-.card .box p{
+.right-section .box p{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
 
-.card .box:hover p{
-    font-size: 12px;
+
+.box:hover p{
+    font-size: 13px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
-    transition: 0.3s;
+    transition:.3s
 }
 
 main .right-section .card-link {
     position: absolute;
     bottom: 0px;
-    right: 50%;
     left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
@@ -128,6 +141,7 @@ main .right-section .card-link {
 
 .card-link .icon-github,
 .card-link .icon-link {
+    display: block;
     font-size: 1.5rem;
     color: var(--text-color);
     transition: .3s;
@@ -135,7 +149,7 @@ main .right-section .card-link {
 
 .card-link .icon-github:hover,
 .card .icon-link:hover {
-    font-size: 1.6rem;
+    scale: 1.7;
     color: var(--title-color);
 }
 
@@ -154,6 +168,19 @@ main .right-section .card-link {
     border-bottom: 1px solid;
     display: flex;
     justify-content: space-between;
+}
+
+
+/**************** ****************/
+/**************** ****************/
+
+/* Model ---- pop up*/
+.right-section .fixed{
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(40, 40, 48, .91);
+    backdrop-filter: blur(2px);
 }
 
 
@@ -177,7 +204,7 @@ light ===>>>left-section ==> Card
     border-radius: 5px;
     font-size: 15px;
     box-shadow: 0 1px 1px hsla(0, 0%, 0%, .195);
-    /* background-image: linear-gradient(rgba(255, 255, 255, .05), rgba(255, 255, 255, .05)); */
+    background: linear-gradient(rgba(255, 255, 255, .05), rgba(255, 255, 255, .05));
 }
 
 .light .card:hover {
@@ -231,7 +258,7 @@ light ===>>>left-section ==> Card
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 999px) {
     main{
         display: flex;
         flex-direction: column;
@@ -242,7 +269,7 @@ light ===>>>left-section ==> Card
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 5px 0;
+        margin-bottom: 25px;
     }
 
     main .left-section button {
@@ -274,24 +301,42 @@ light ===>>>left-section ==> Card
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-content: center;
+
+    }
+
+    main .right-section .card {
+        width: 48%;
+        margin: auto;
     }
 
 
 }
 
-@media (max-width: 600px){
+@media screen and (max-width: 768px) {
+    main .right-section .card {
+        width: 45%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 588px){
     main{
         display: flex;
         flex-direction: column;
     }
     main .left-section {
         margin: auto;
-        width: 15rem;
+        width: 100%;
         gap: 1rem;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        padding: 5px 0;
+        justify-content: space-between;
+    }
+
+    main .right-section .card {
+        width: 100%;
+        margin: auto;
     }
 }

@@ -4,13 +4,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2rem;
-    padding: 2rem 0;
+    padding: 5% 5%;
     gap: 2rem;
 }
 
 .footer ul{
     display: flex;
-    gap: 1rem;  
+    gap: 1.5rem;  
 }
 
 .footer ul a{
@@ -31,7 +31,8 @@
 
 .footer ul .social-icon:hover{
     color: var(--title-color);
-    transform: scale(1.2)translateY(-5px);
+    /* transform: scale(1.2)translateY(-5px); */
+    scale: 1.5;
 }
 
 

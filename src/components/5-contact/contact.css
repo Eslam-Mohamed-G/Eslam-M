@@ -1,20 +1,32 @@
 
 
-.contact-us{
-    padding-top: 5rem;
+.contact_us{
+    padding: 8% 5%;
+    position: relative;
 }
 
-.contact-us .icon-envelope{
+.contact_us::after{
+    content: "";
+    background-color: var(--border);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.contact_us .icon-envelope{
     color: var(--text-color);
     margin-right: 1rem;
     font-size: 1.8rem;
 }
 
-.contact-us .title-animation{
+.contact_us .title-animation{
     display: none;
 }
 
-.contact-us .title{
+.contact_us .title{
     font-size: 2.1rem;
     justify-items: center;
     color: var(--title-color);
@@ -25,20 +37,21 @@
 
 /******************* form*************************/
 /******************* form*************************/
-.contact-form{
+.contact_form{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-content: space-between;
+    margin-top: 1.5rem;
 }
-.contact-form .form{
+.contact_form .form{
     display: flex;
     flex-direction: column;
-    margin-top: 1.5rem;
     height: fit-content;
-    width: 55%;
+    width: 50%;
 }
 
-.contact-form div{
+.contact_form .inputEmail,.contact_form .inputTextarea{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -51,55 +64,55 @@
 /***************contact-animation***************/
 /***************contact-animation***************/
 
-.contact-form .contact-animation{
+.contact_form .contactAnimation{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    opacity: .6;
+    width: 40%;
     position: relative;
-    display: block;
-    margin: 1.5rem px auto;
-    width: 45%;
 }
 
-.contactUs-animation{
+.contact_form .contactAnimation .lottieContactAnimation{
+    width: 100%;
     position: absolute;
-    top: 10%;
-    height: 75%;
+    top: 0px;
 }
-.contact-form label{
+
+
+/************Input***********/
+/************Input***********/
+.contact_form label{
     color: var(--text-color);
     margin-right: .7rem;
     margin-bottom: 5px;
-
 }
-
-/************Input***********/
-/************Input***********/
-
-.contact-form #email, .contact-form #message{
-    all: unset;
+.contact_form #email, .contact_form #message{
+    outline: none; 
     background-color: rgba(63, 63, 70, .15);
     border: 1px solid rgb(63, 63, 70);
-    width: 75%;
+    width: 100%;
     padding: 1rem 0 1rem .5rem;
+    margin-top: .5rem;
     border-radius: 5px;
     transition: .3s;
     color: var(--text-color);
 }
+.contact_form #message{
+    min-height: 9rem;
+    resize: vertical;
+}
 
-.contact-form #email:focus, .contact-form #message:focus{
+.contact_form #email:focus, .contact_form #message:focus{
     border: 1px solid var(--blue);
 }
 
-.contact-form #message{
-    min-height: 9rem;
-    resize: both;
-}
-
-
 
 
 /*************submition***************/
 /*************submition***************/
 
-.contact-us .submition{
+.contact_us .submition{
     display: flex;
     flex-direction: row;
     position: relative;
@@ -109,7 +122,7 @@
     width: fit-content;
 }
 
-.contact-form button{
+.contact_form button{
     background-color: rgba(36, 37, 46, 1);
     border: 1px solid rgb(63, 63, 70);
     width: 11rem;
@@ -121,12 +134,12 @@
     transition: .5s;
 }
 
-.contact-form button:hover{
+.contact_form button:hover{
     border: 1px solid var(--blue);
     opacity: 1;
 }
 
-.contact-form p{margin-top: 2rem;}
+.contact_form p{margin-top: 2rem;}
 
 .done-animation{
     position: absolute;
@@ -139,12 +152,12 @@
 /*************light mode************/
 /*************light mode************/
 
-.light .contact-form button:hover{
+.light .contact_form button:hover{
     border: 1px solid var(--border-color);
     opacity: 1;
 }
 
-.light #email:focus, .light .contact-form #message:focus{
+.light #email:focus, .light .contact_form #message:focus{
     border: 1px solid var(--border-color)
 }
 
@@ -156,23 +169,64 @@
 }
 
 
-@media (max-width: 800px){
-    .contact-form .form{
-        width: 55%;
-        margin: 2rem .5rem auto;
+@media (max-width: 999px){
+
+    .contact_form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-top: 1.5rem;
     }
 
-    .contact-form #email, .contact-form #message{
+    .contact_form .form{
+        width: 100%;
+        position: relative;
+    }
+    .contact_form .contactAnimation{
+        width: 70%;
+        position: relative;
+        right: -20px;
+    }
+    .contact_form .contactAnimation .lottieContactAnimation{
+        position: absolute;
+        top: 0;
+        bottom: 0;
         width: 100%;
     }
 
-    .contact-form .contact-animation{
-        width: 45%;
+    .contact_form #email, .contact_form #message{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .contact_form .form{
+        width: 100%;
+        position: relative;
+    }
+    .contact_form .contactAnimation{
+        width: 0;
+    }
+    .contact_form .contactAnimation .lottieContactAnimation{
+        width: 75%;
+        opacity: .3;
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
 @media (max-width: 500px){
-    .contact-us .title-animation{
+    .contact_form .contactAnimation{
+        display: none;
+    }
+    .icon-envelope{
+        display: none;
+    }
+    .contact_us .title-animation{
         display: inline;
         margin-top: -4px;
         margin-right: 1rem;
@@ -182,28 +236,21 @@
         display: none;
     }
 
-    .icon-envelope{
-        display: none;
-    }
-    .contact-form .form{
-        width: 100%;
-        margin: 2rem .5rem auto;
 
+    .contact_form .form{
+        width: 100%;
     }
-    .contact-form div{
+    .contact_form div{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: start;
         gap: 10px;
-        padding: 2px;
     }
 
-    .contact-form #email, .contact-form #message{
+    .contact_form #email, .contact_form #message{
         width: 100%;
     }
 
-    .contact-form .contact-animation{
-        display: none;
-    }
+
 }

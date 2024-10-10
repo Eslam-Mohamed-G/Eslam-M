@@ -13,7 +13,7 @@ const Hero = () => {
     <section className="hero" id="hero">
       <div className="left-section">
         <div className="parent-avatar">
-          <img src="./img/me.jpeg" className="avatar" alt="" />
+          <img src="./img/me.jpeg" className="avatar" alt="eslam" />
         </div>
         <motion.div
           initial="hidden"
@@ -56,7 +56,7 @@ const Hero = () => {
             },
           }}
           >
-            Talented Frrontend Developer Proficient in HTML, CSS (including sass and Bootstrap), JavaScript (with TypeScript)
+            Talented Frrontend Developer Proficient in HTML, CSS(including sass and Bootstrap), JavaScript (with TypeScript)
             React, Next.js, and responsive design, skilled in unit testing, git/github, API integration.
           </motion.p>
         </motion.div>
