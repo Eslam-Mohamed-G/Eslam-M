@@ -119,7 +119,7 @@ h3{
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        padding: 8% 5%;
+        padding: 10% 5%;
     }
     .skill-card{
         width: 100%;
