@@ -208,9 +208,7 @@ light ===>>>left-section ==> Card
 }
 
 .light .card:hover {
-    width: fit-content;
     border: 1px solid var(--border-color);
-
     rotate: 1deg;
     scale: 1.01;
 }

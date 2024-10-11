@@ -1,4 +1,4 @@
-<a href="https://eslam-m.vercel.app" target="_blank"><h1 align="center">Welcome to developer-portfolio 👋</h1></a>(https://eslam-m.vercel.app)
+[<h1 align="center">Welcome to developer-portfolio 👋</h1>](https://eslam-m.vercel.app)
 
 
 
@@ -6,7 +6,7 @@
 
 <p align="center">
   <kbd>
-    <img src="./preview.png"></img>
+    [<img src="./preview.png"></img>](https://eslam-m.vercel.app)
   </kbd>
 </p>
 
