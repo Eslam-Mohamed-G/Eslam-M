@@ -1,17 +1,16 @@
 <h1 align="center">
   Welcome to developer-portfolio 👋
-  (https://eslam-m.vercel.app)
 </h1>
 
 
 
-## FrontEnd Developer Portfolio Template built with React + Vite,that helps you showcase your work and skills as a software developer.(https://eslam-m.vercel.app)
+## FrontEnd Developer Portfolio Template built with React + Vite,that helps you showcase your work and skills as a software developer.
 
 <p align="center">
   <kbd>
     <img src="./preview.png"></img>
   </kbd>
-</p>(https://eslam-m.vercel.app)
+</p>
 
 ## the link of my Portfolio
 - <a href="https://eslam-m.vercel.app/" target="_blank">Welcome to my portfolio</a>
