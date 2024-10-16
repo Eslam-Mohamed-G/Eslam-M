@@ -87,7 +87,7 @@ const Hero = () => {
         </div>
         <button className="resume" onClick={(e) => {
           e.preventDefault();
-          window.location.href = 'https://drive.google.com/file/d/14OrCwsmK9lCiccNVGH_3tujBqYZw5qtA/view?usp=sharing';
+          window.location.href = 'https://drive.google.com/file/d/1AiBKYkJdgy8_kvpXUJ5L81zPC5Rq_2nd/view?usp=sharing';
         }}>Resume 📝</button>
       </div>
 
