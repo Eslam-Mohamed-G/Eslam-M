@@ -64,7 +64,7 @@ const Hero = () => {
           <ul>
             <li>
               <a
-                href="https://www.linkedin.com/in/islam-mohamed-237759312/"
+                href="https://www.linkedin.com/in/islam-mg"
                 target="_blank"
                 className="hero-icon icon-linkedin-square"
               ></a>
@@ -87,7 +87,7 @@ const Hero = () => {
         </div>
         <button className="resume" onClick={(e) => {
           e.preventDefault();
-          window.location.href = 'https://drive.google.com/file/d/1AiBKYkJdgy8_kvpXUJ5L81zPC5Rq_2nd/view?usp=sharing';
+          window.location.href = 'https://drive.google.com/file/d/1JazShJXrSl-5iLnoMvyBfEy0R9HODChL/view?usp=sharing';
         }}>Resume 📝</button>
       </div>
 
